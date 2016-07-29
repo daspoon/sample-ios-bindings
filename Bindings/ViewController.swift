@@ -1,25 +1,43 @@
-//
-//  ViewController.swift
-//  Bindings
-//
-//  Created by David Spooner on 7/29/16.
-//  Copyright © 2016 Lambda. All rights reserved.
-//
+/*
+
+  Copyright (c) 2016 David Spooner; see License.txt
+
+  A view controller demonstrating a simple use of Cocoa bindings for iOS.
+
+*/
 
 import UIKit
 
-class ViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+class ViewController: UIViewController
+  {
+
+    @IBOutlet var nameVisibleSwitch: UISwitch!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var nameField: UITextField!
+
+
+    override func viewWillAppear(animated: Bool)
+      {
+        super.viewWillAppear(animated)
+
+        // Bind visibility of the name label/field to the 'on' state of the switch.
+        for component in [nameLabel, nameField] {
+          component.bind("hidden", toObject:nameVisibleSwitch, withKeyPath:"on", options:[
+              NSValueTransformerNameBindingOption: NSNegateBooleanTransformerName,
+            ])
+        }
+      }
+
+
+    override func viewDidDisappear(animated: Bool)
+      {
+        super.viewDidDisappear(animated)
+
+        // Unbind the visibility of the name label/field
+        for component in [nameLabel, nameField] {
+          component.unbind("hidden")
+        }
+      }
+
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-
-}
-

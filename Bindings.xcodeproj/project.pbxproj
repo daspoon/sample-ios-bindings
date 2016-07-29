@@ -12,6 +12,11 @@
 		55CAB10C1D4BC01000AE25E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB10A1D4BC01000AE25E7 /* Main.storyboard */; };
 		55CAB10E1D4BC01000AE25E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB10D1D4BC01000AE25E7 /* Assets.xcassets */; };
 		55CAB1111D4BC01000AE25E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB10F1D4BC01000AE25E7 /* LaunchScreen.storyboard */; };
+		55CAB1191D4BC0AC00AE25E7 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB1181D4BC0AC00AE25E7 /* Binding.swift */; };
+		55CAB11D1D4BCF8300AE25E7 /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB11C1D4BCF8300AE25E7 /* Toggle.swift */; };
+		55CAB11F1D4BD2D900AE25E7 /* NSObject-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */; };
+		55CAB1221D4BE09100AE25E7 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB1201D4BE09100AE25E7 /* License.txt */; };
+		55CAB1231D4BE09100AE25E7 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB1211D4BE09100AE25E7 /* ReadMe.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		55CAB10D1D4BC01000AE25E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55CAB1101D4BC01000AE25E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55CAB1121D4BC01000AE25E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55CAB1181D4BC0AC00AE25E7 /* Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		55CAB11C1D4BCF8300AE25E7 /* Toggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
+		55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-extras.swift"; sourceTree = "<group>"; };
+		55CAB1201D4BE09100AE25E7 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		55CAB1211D4BE09100AE25E7 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +48,8 @@
 		55CAB0FA1D4BC01000AE25E7 = {
 			isa = PBXGroup;
 			children = (
+				55CAB1201D4BE09100AE25E7 /* License.txt */,
+				55CAB1211D4BE09100AE25E7 /* ReadMe.txt */,
 				55CAB1051D4BC01000AE25E7 /* Bindings */,
 				55CAB1041D4BC01000AE25E7 /* Products */,
 			);
@@ -55,6 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				55CAB1061D4BC01000AE25E7 /* AppDelegate.swift */,
+				55CAB1181D4BC0AC00AE25E7 /* Binding.swift */,
+				55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */,
+				55CAB11C1D4BCF8300AE25E7 /* Toggle.swift */,
 				55CAB1081D4BC01000AE25E7 /* ViewController.swift */,
 				55CAB10A1D4BC01000AE25E7 /* Main.storyboard */,
 				55CAB10D1D4BC01000AE25E7 /* Assets.xcassets */,
@@ -122,8 +137,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CAB1221D4BE09100AE25E7 /* License.txt in Resources */,
 				55CAB1111D4BC01000AE25E7 /* LaunchScreen.storyboard in Resources */,
 				55CAB10E1D4BC01000AE25E7 /* Assets.xcassets in Resources */,
+				55CAB1231D4BE09100AE25E7 /* ReadMe.txt in Resources */,
 				55CAB10C1D4BC01000AE25E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				55CAB1091D4BC01000AE25E7 /* ViewController.swift in Sources */,
+				55CAB11D1D4BCF8300AE25E7 /* Toggle.swift in Sources */,
+				55CAB1191D4BC0AC00AE25E7 /* Binding.swift in Sources */,
 				55CAB1071D4BC01000AE25E7 /* AppDelegate.swift in Sources */,
+				55CAB11F1D4BD2D900AE25E7 /* NSObject-extras.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
