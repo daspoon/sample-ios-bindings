@@ -17,7 +17,22 @@
 		55CAB11F1D4BD2D900AE25E7 /* NSObject-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */; };
 		55CAB1221D4BE09100AE25E7 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB1201D4BE09100AE25E7 /* License.txt */; };
 		55CAB1231D4BE09100AE25E7 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB1211D4BE09100AE25E7 /* ReadMe.txt */; };
+		55CAB12B1D4BE85300AE25E7 /* BindingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB12A1D4BE85300AE25E7 /* BindingsTests.swift */; };
+		55CAB1321D4BEC2800AE25E7 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB1181D4BC0AC00AE25E7 /* Binding.swift */; };
+		55CAB1331D4BEC2800AE25E7 /* NSObject-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */; };
+		55CAB1351D4BF80600AE25E7 /* NSValueTransformer-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB1341D4BF80600AE25E7 /* NSValueTransformer-extras.swift */; };
+		55CAB1361D4BF92600AE25E7 /* NSValueTransformer-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB1341D4BF80600AE25E7 /* NSValueTransformer-extras.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55CAB12D1D4BE85300AE25E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55CAB0FB1D4BC01000AE25E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55CAB1021D4BC01000AE25E7;
+			remoteInfo = Bindings;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		55CAB1031D4BC01000AE25E7 /* Bindings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bindings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +47,21 @@
 		55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-extras.swift"; sourceTree = "<group>"; };
 		55CAB1201D4BE09100AE25E7 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		55CAB1211D4BE09100AE25E7 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		55CAB1281D4BE85300AE25E7 /* BindingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BindingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55CAB12A1D4BE85300AE25E7 /* BindingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsTests.swift; sourceTree = "<group>"; };
+		55CAB12C1D4BE85300AE25E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55CAB1341D4BF80600AE25E7 /* NSValueTransformer-extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSValueTransformer-extras.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		55CAB1001D4BC01000AE25E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55CAB1251D4BE85300AE25E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +77,7 @@
 				55CAB1201D4BE09100AE25E7 /* License.txt */,
 				55CAB1211D4BE09100AE25E7 /* ReadMe.txt */,
 				55CAB1051D4BC01000AE25E7 /* Bindings */,
+				55CAB1291D4BE85300AE25E7 /* BindingsTests */,
 				55CAB1041D4BC01000AE25E7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				55CAB1031D4BC01000AE25E7 /* Bindings.app */,
+				55CAB1281D4BE85300AE25E7 /* BindingsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +97,7 @@
 				55CAB1061D4BC01000AE25E7 /* AppDelegate.swift */,
 				55CAB1181D4BC0AC00AE25E7 /* Binding.swift */,
 				55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */,
+				55CAB1341D4BF80600AE25E7 /* NSValueTransformer-extras.swift */,
 				55CAB11C1D4BCF8300AE25E7 /* Toggle.swift */,
 				55CAB1081D4BC01000AE25E7 /* ViewController.swift */,
 				55CAB10A1D4BC01000AE25E7 /* Main.storyboard */,
@@ -77,6 +106,15 @@
 				55CAB1121D4BC01000AE25E7 /* Info.plist */,
 			);
 			path = Bindings;
+			sourceTree = "<group>";
+		};
+		55CAB1291D4BE85300AE25E7 /* BindingsTests */ = {
+			isa = PBXGroup;
+			children = (
+				55CAB12A1D4BE85300AE25E7 /* BindingsTests.swift */,
+				55CAB12C1D4BE85300AE25E7 /* Info.plist */,
+			);
+			path = BindingsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +137,24 @@
 			productReference = 55CAB1031D4BC01000AE25E7 /* Bindings.app */;
 			productType = "com.apple.product-type.application";
 		};
+		55CAB1271D4BE85300AE25E7 /* BindingsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55CAB12F1D4BE85300AE25E7 /* Build configuration list for PBXNativeTarget "BindingsTests" */;
+			buildPhases = (
+				55CAB1241D4BE85300AE25E7 /* Sources */,
+				55CAB1251D4BE85300AE25E7 /* Frameworks */,
+				55CAB1261D4BE85300AE25E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55CAB12E1D4BE85300AE25E7 /* PBXTargetDependency */,
+			);
+			name = BindingsTests;
+			productName = BindingsTests;
+			productReference = 55CAB1281D4BE85300AE25E7 /* BindingsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +167,10 @@
 				TargetAttributes = {
 					55CAB1021D4BC01000AE25E7 = {
 						CreatedOnToolsVersion = 7.3.1;
+					};
+					55CAB1271D4BE85300AE25E7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 55CAB1021D4BC01000AE25E7;
 					};
 				};
 			};
@@ -128,6 +188,7 @@
 			projectRoot = "";
 			targets = (
 				55CAB1021D4BC01000AE25E7 /* Bindings */,
+				55CAB1271D4BE85300AE25E7 /* BindingsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -145,6 +206,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55CAB1261D4BE85300AE25E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -157,10 +225,30 @@
 				55CAB1191D4BC0AC00AE25E7 /* Binding.swift in Sources */,
 				55CAB1071D4BC01000AE25E7 /* AppDelegate.swift in Sources */,
 				55CAB11F1D4BD2D900AE25E7 /* NSObject-extras.swift in Sources */,
+				55CAB1351D4BF80600AE25E7 /* NSValueTransformer-extras.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55CAB1241D4BE85300AE25E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55CAB12B1D4BE85300AE25E7 /* BindingsTests.swift in Sources */,
+				55CAB1321D4BEC2800AE25E7 /* Binding.swift in Sources */,
+				55CAB1331D4BEC2800AE25E7 /* NSObject-extras.swift in Sources */,
+				55CAB1361D4BF92600AE25E7 /* NSValueTransformer-extras.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55CAB12E1D4BE85300AE25E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55CAB1021D4BC01000AE25E7 /* Bindings */;
+			targetProxy = 55CAB12D1D4BE85300AE25E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		55CAB10A1D4BC01000AE25E7 /* Main.storyboard */ = {
@@ -289,6 +377,30 @@
 			};
 			name = Release;
 		};
+		55CAB1301D4BE85300AE25E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BindingsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambda.BindingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bindings.app/Bindings";
+			};
+			name = Debug;
+		};
+		55CAB1311D4BE85300AE25E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BindingsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambda.BindingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bindings.app/Bindings";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -306,6 +418,14 @@
 			buildConfigurations = (
 				55CAB1161D4BC01000AE25E7 /* Debug */,
 				55CAB1171D4BC01000AE25E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55CAB12F1D4BE85300AE25E7 /* Build configuration list for PBXNativeTarget "BindingsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55CAB1301D4BE85300AE25E7 /* Debug */,
+				55CAB1311D4BE85300AE25E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
