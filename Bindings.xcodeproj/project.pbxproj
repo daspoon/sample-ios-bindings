@@ -16,7 +16,7 @@
 		55CAB11D1D4BCF8300AE25E7 /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB11C1D4BCF8300AE25E7 /* Toggle.swift */; };
 		55CAB11F1D4BD2D900AE25E7 /* NSObject-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */; };
 		55CAB1221D4BE09100AE25E7 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB1201D4BE09100AE25E7 /* License.txt */; };
-		55CAB1231D4BE09100AE25E7 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB1211D4BE09100AE25E7 /* ReadMe.txt */; };
+		55CAB1231D4BE09100AE25E7 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB1211D4BE09100AE25E7 /* ReadMe.md */; };
 		55CAB12B1D4BE85300AE25E7 /* BindingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB12A1D4BE85300AE25E7 /* BindingsTests.swift */; };
 		55CAB1321D4BEC2800AE25E7 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB1181D4BC0AC00AE25E7 /* Binding.swift */; };
 		55CAB1331D4BEC2800AE25E7 /* NSObject-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */; };
@@ -46,7 +46,7 @@
 		55CAB11C1D4BCF8300AE25E7 /* Toggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
 		55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-extras.swift"; sourceTree = "<group>"; };
 		55CAB1201D4BE09100AE25E7 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
-		55CAB1211D4BE09100AE25E7 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		55CAB1211D4BE09100AE25E7 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		55CAB1281D4BE85300AE25E7 /* BindingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BindingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CAB12A1D4BE85300AE25E7 /* BindingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsTests.swift; sourceTree = "<group>"; };
 		55CAB12C1D4BE85300AE25E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				55CAB1201D4BE09100AE25E7 /* License.txt */,
-				55CAB1211D4BE09100AE25E7 /* ReadMe.txt */,
+				55CAB1211D4BE09100AE25E7 /* ReadMe.md */,
 				55CAB1051D4BC01000AE25E7 /* Bindings */,
 				55CAB1291D4BE85300AE25E7 /* BindingsTests */,
 				55CAB1041D4BC01000AE25E7 /* Products */,
@@ -201,7 +201,7 @@
 				55CAB1221D4BE09100AE25E7 /* License.txt in Resources */,
 				55CAB1111D4BC01000AE25E7 /* LaunchScreen.storyboard in Resources */,
 				55CAB10E1D4BC01000AE25E7 /* Assets.xcassets in Resources */,
-				55CAB1231D4BE09100AE25E7 /* ReadMe.txt in Resources */,
+				55CAB1231D4BE09100AE25E7 /* ReadMe.md in Resources */,
 				55CAB10C1D4BC01000AE25E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +420,7 @@
 				55CAB1171D4BC01000AE25E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55CAB12F1D4BE85300AE25E7 /* Build configuration list for PBXNativeTarget "BindingsTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +429,7 @@
 				55CAB1311D4BE85300AE25E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
