@@ -2,7 +2,7 @@
 
   Copyright (c) 2009-2016 David Spooner; see License.txt
 
-  An extension of NSObject which implements a simplified Cocoa bindings interface for iOS.
+  An extension of NSObject implementing a simplified Cocoa bindings interface for iOS.
 
 */
 
@@ -66,10 +66,9 @@ public extension NSObject
 
     public func setValue(value: AnyObject?, forBinding key: String) throws
       {
-        // Set the value for the specified binding. This method is useful when implementing bindings-aware UI elements.
-        // If a binding exists for the specified property then it sets the coresponding property of the source object;
-        // otherwise it defers to -setValue:forKey:. An exception is raised if the source object for the binding fails
-        // to validate the given value.
+        // If a binding exists for the specified property then the coresponding property of that binding's source object
+        // is set; otherwise we defer to -setValue:forKey:. An exception is raised if the source object for the binding
+        // fails to validate the given value. This method is useful when implementing bindings-aware UI elements.
 
         if let info = infoForBinding(key) {
           // Extract the source object and keypath for the binding

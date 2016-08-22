@@ -19,11 +19,12 @@ public extension NSValueTransformer
         init(forwardBlock forward: AnyObject? -> AnyObject?)
           {
             forwardBlock = forward
-            super.init()
           }
 
         override func transformedValue(value : AnyObject?) -> AnyObject?
-          { return forwardBlock(value) }
+          {
+            return forwardBlock(value)
+          }
       }
 
 

@@ -2,7 +2,7 @@
 
   Copyright (c) 2016 David Spooner; see License.txt
 
-  A view controller demonstrating a simple use of Cocoa bindings for iOS.
+  A simple view controller demonstrating use of Cocoa bindings for iOS.
 
 */
 
