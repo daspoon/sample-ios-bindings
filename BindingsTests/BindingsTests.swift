@@ -89,6 +89,33 @@ class BindingsTests: XCTestCase
       }
 
 
+    func testReverseTransformation()
+      {
+        // Test reversible value transformer in binding options.
+
+        let source = Subject()
+        let target = Subject()
+
+        // Bind target's stringValue to the source's stringValue, using a value transformer to translate between upper and lower case
+        target.bind("stringValue", toObject:source, withKeyPath:"stringValue", options:[
+            NSValueTransformerBindingOption: NSValueTransformer.withForwardBlock({
+                  guard let string = $0 as? NSString else { return nil }
+                  return string.uppercaseString
+                },
+              reverseBlock: {
+                  guard let string = $0 as? NSString else { return nil }
+                  return string.lowercaseString
+                }),
+          ])
+
+        source.stringValue = "heynow"
+        XCTAssert(target.stringValue == "HEYNOW")
+
+        try! target.setValue("BUDDY", forBinding:"stringValue")
+        XCTAssert(source.stringValue == "buddy")
+      }
+
+
     func testNullPlaceholder()
       {
         // Test use of null placeholder in binding options...

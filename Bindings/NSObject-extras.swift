@@ -18,6 +18,7 @@ public let NSValueTransformerNameBindingOption = "NSValueTransformerNameBindingO
 // Cocoa-bindings constants relevant to this implementation:
 let NSObservedObjectKey = "NSObservedObject"
 let NSObservedKeyPathKey = "NSObservedKeyPath"
+let NSOptionsKey = "NSOptions"
 #endif
 
 
@@ -56,6 +57,7 @@ public extension NSObject
           return [
               NSObservedObjectKey: binding.sourceObject,
               NSObservedKeyPathKey: binding.sourceKeyPath,
+              NSOptionsKey: binding.options ?? [:],
             ]
         }
         return nil
@@ -74,10 +76,18 @@ public extension NSObject
           // Extract the source object and keypath for the binding
           let object = info[NSObservedObjectKey] as! NSObject
           let keypath = info[NSObservedKeyPathKey] as! String
-          // Ask the observed object to validate the given value, throwing on failure
+          let options = info[NSOptionsKey] as? [String: AnyObject]
+          // Start with the given value
           var validValue = value
+          // Apply the reverse transformation specified in the binding options, if applicable.
+          if let transformer = Binding.valueTransformerFromOptions(options) {
+            if transformer.dynamicType.allowsReverseTransformation() {
+              validValue = transformer.reverseTransformedValue(validValue)
+            }
+          }
+          // Ask the observed object to validate the given value, throwing on failure
           try object.validateValue(&validValue, forKeyPath:keypath)
-          setValue(validValue, forKeyPath:keypath)
+          object.setValue(validValue, forKeyPath:keypath)
         }
         else {
           // No binding, so effect the receiver's property directly.
