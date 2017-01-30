@@ -13,7 +13,6 @@
 		55CAB10E1D4BC01000AE25E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB10D1D4BC01000AE25E7 /* Assets.xcassets */; };
 		55CAB1111D4BC01000AE25E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB10F1D4BC01000AE25E7 /* LaunchScreen.storyboard */; };
 		55CAB1191D4BC0AC00AE25E7 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB1181D4BC0AC00AE25E7 /* Binding.swift */; };
-		55CAB11D1D4BCF8300AE25E7 /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB11C1D4BCF8300AE25E7 /* Toggle.swift */; };
 		55CAB11F1D4BD2D900AE25E7 /* NSObject-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */; };
 		55CAB1221D4BE09100AE25E7 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB1201D4BE09100AE25E7 /* License.txt */; };
 		55CAB1231D4BE09100AE25E7 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 55CAB1211D4BE09100AE25E7 /* ReadMe.md */; };
@@ -22,6 +21,8 @@
 		55CAB1331D4BEC2800AE25E7 /* NSObject-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */; };
 		55CAB1351D4BF80600AE25E7 /* NSValueTransformer-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB1341D4BF80600AE25E7 /* NSValueTransformer-extras.swift */; };
 		55CAB1361D4BF92600AE25E7 /* NSValueTransformer-extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CAB1341D4BF80600AE25E7 /* NSValueTransformer-extras.swift */; };
+		55D2D4421E3FE0EC002E098C /* BindableSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2D4411E3FE0EC002E098C /* BindableSwitch.swift */; };
+		55D2D4441E3FE10C002E098C /* BindableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2D4431E3FE10C002E098C /* BindableTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,6 @@
 		55CAB1101D4BC01000AE25E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55CAB1121D4BC01000AE25E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55CAB1181D4BC0AC00AE25E7 /* Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
-		55CAB11C1D4BCF8300AE25E7 /* Toggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
 		55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-extras.swift"; sourceTree = "<group>"; };
 		55CAB1201D4BE09100AE25E7 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		55CAB1211D4BE09100AE25E7 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		55CAB12A1D4BE85300AE25E7 /* BindingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsTests.swift; sourceTree = "<group>"; };
 		55CAB12C1D4BE85300AE25E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55CAB1341D4BF80600AE25E7 /* NSValueTransformer-extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSValueTransformer-extras.swift"; sourceTree = "<group>"; };
+		55D2D4411E3FE0EC002E098C /* BindableSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindableSwitch.swift; sourceTree = "<group>"; };
+		55D2D4431E3FE10C002E098C /* BindableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindableTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +98,10 @@
 			children = (
 				55CAB1061D4BC01000AE25E7 /* AppDelegate.swift */,
 				55CAB1181D4BC0AC00AE25E7 /* Binding.swift */,
+				55D2D4411E3FE0EC002E098C /* BindableSwitch.swift */,
+				55D2D4431E3FE10C002E098C /* BindableTextField.swift */,
 				55CAB11E1D4BD2D900AE25E7 /* NSObject-extras.swift */,
 				55CAB1341D4BF80600AE25E7 /* NSValueTransformer-extras.swift */,
-				55CAB11C1D4BCF8300AE25E7 /* Toggle.swift */,
 				55CAB1081D4BC01000AE25E7 /* ViewController.swift */,
 				55CAB10A1D4BC01000AE25E7 /* Main.storyboard */,
 				55CAB10D1D4BC01000AE25E7 /* Assets.xcassets */,
@@ -167,9 +170,12 @@
 				TargetAttributes = {
 					55CAB1021D4BC01000AE25E7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 					};
 					55CAB1271D4BE85300AE25E7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FH6VJP4VHD;
+						LastSwiftMigration = 0820;
 						TestTargetID = 55CAB1021D4BC01000AE25E7;
 					};
 				};
@@ -221,11 +227,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				55CAB1091D4BC01000AE25E7 /* ViewController.swift in Sources */,
-				55CAB11D1D4BCF8300AE25E7 /* Toggle.swift in Sources */,
 				55CAB1191D4BC0AC00AE25E7 /* Binding.swift in Sources */,
+				55D2D4421E3FE0EC002E098C /* BindableSwitch.swift in Sources */,
 				55CAB1071D4BC01000AE25E7 /* AppDelegate.swift in Sources */,
 				55CAB11F1D4BD2D900AE25E7 /* NSObject-extras.swift in Sources */,
 				55CAB1351D4BF80600AE25E7 /* NSValueTransformer-extras.swift in Sources */,
+				55D2D4441E3FE10C002E098C /* BindableTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +370,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambda.Bindings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -374,6 +382,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambda.Bindings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -381,10 +390,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = FH6VJP4VHD;
 				INFOPLIST_FILE = BindingsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambda.BindingsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bindings.app/Bindings";
 			};
 			name = Debug;
@@ -393,10 +404,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = FH6VJP4VHD;
 				INFOPLIST_FILE = BindingsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambda.BindingsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bindings.app/Bindings";
 			};
 			name = Release;

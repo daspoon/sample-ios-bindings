@@ -78,9 +78,9 @@ class BindingsTests: XCTestCase
 
         // Bind target's intValue to that of source, using a value transformer to negate
         target.bind("intValue", toObject:source, withKeyPath:"intValue", options:[
-            NSValueTransformerBindingOption: NSValueTransformer.withForwardBlock({ value in
+            NSValueTransformerBindingOption: ValueTransformer.withForwardBlock({ value in
                 guard let number = value as? NSNumber else { return nil }
-                return NSNumber(int: -number.intValue)
+                return NSNumber(value: -number.int32Value as Int32)
               }),
           ])
 
@@ -98,20 +98,20 @@ class BindingsTests: XCTestCase
 
         // Bind target's stringValue to the source's stringValue, using a value transformer to translate between upper and lower case
         target.bind("stringValue", toObject:source, withKeyPath:"stringValue", options:[
-            NSValueTransformerBindingOption: NSValueTransformer.withForwardBlock({
+            NSValueTransformerBindingOption: ValueTransformer.withForwardBlock({
                   guard let string = $0 as? NSString else { return nil }
-                  return string.uppercaseString
+                  return string.uppercased as AnyObject
                 },
               reverseBlock: {
                   guard let string = $0 as? NSString else { return nil }
-                  return string.lowercaseString
+                  return string.lowercased as AnyObject
                 }),
           ])
 
         source.stringValue = "heynow"
         XCTAssert(target.stringValue == "HEYNOW")
 
-        try! target.setValue("BUDDY", forBinding:"stringValue")
+        try! target.setValue("BUDDY" as AnyObject, forBinding:"stringValue")
         XCTAssert(source.stringValue == "buddy")
       }
 
@@ -125,7 +125,7 @@ class BindingsTests: XCTestCase
 
         // Bind target's stringValue to source's optionalStringValue with null placeholder option as "nil"
         target.bind("stringValue", toObject:source, withKeyPath:"optionalStringValue", options:[
-            NSNullPlaceholderBindingOption: "nil",
+            NSNullPlaceholderBindingOption: "nil" as AnyObject,
           ])
         XCTAssert(target.stringValue == "nil")
 

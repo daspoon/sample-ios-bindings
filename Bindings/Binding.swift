@@ -11,14 +11,14 @@
 import Foundation
 
 
-public class Binding : NSObject
+open class Binding : NSObject
   {
 
-    public let sourceObject: NSObject
-    public let targetObject: NSObject
-    public let sourceKeyPath: String
-    public let targetKey: String
-    public let options: [String:AnyObject]?
+    open let sourceObject: NSObject
+    open let targetObject: NSObject
+    open let sourceKeyPath: String
+    open let targetKey: String
+    open let options: [String:AnyObject]
 
 
     public init(sourceObject: NSObject, sourceKeyPath: String, targetObject: NSObject, targetKey: String, options: [String:AnyObject]?)
@@ -27,11 +27,11 @@ public class Binding : NSObject
         self.sourceKeyPath = sourceKeyPath
         self.targetObject = targetObject
         self.targetKey = targetKey
-        self.options = options;
+        self.options = options ?? [:]
 
         super.init()
 
-        sourceObject.addObserver(self, forKeyPath:sourceKeyPath, options:.Initial, context:nil)
+        sourceObject.addObserver(self, forKeyPath:sourceKeyPath, options:.initial, context:nil)
       }
 
 
@@ -41,12 +41,12 @@ public class Binding : NSObject
       }
 
 
-    public static func valueTransformerFromOptions(options: [String: AnyObject]?) -> NSValueTransformer?
+    open static func valueTransformerFromOptions(_ options: [String: AnyObject]?) -> ValueTransformer?
       {
-        var transformer = options?[NSValueTransformerBindingOption] as? NSValueTransformer
+        var transformer = options?[NSValueTransformerBindingOption] as? ValueTransformer
         if transformer == nil {
           if let transformerName = options?[NSValueTransformerNameBindingOption] as? String {
-            transformer = NSValueTransformer(forName:transformerName)
+            transformer = ValueTransformer(forName:NSValueTransformerName(rawValue: transformerName))
             if transformer == nil {
               NSLog("unknown value transformer name: \(transformerName)")
             }
@@ -58,28 +58,28 @@ public class Binding : NSObject
 
     // MARK: - NSKeyValueObserving
 
-    public override func observeValueForKeyPath(keyPath: String?, ofObject sender: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>)
+    open override func observeValue(forKeyPath keyPath: String?, of sender: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
       {
         // Get the current source and target values.
-        var sourceValue = sourceObject.valueForKeyPath(sourceKeyPath)
-        let targetValue = targetObject.valueForKey(targetKey)
+        var sourceValue = sourceObject.value(forKeyPath: sourceKeyPath) as AnyObject?
+        let targetValue = targetObject.value(forKey: targetKey) as AnyObject?
 
         // Substitute the placeholder if the source value is nil.
         if sourceValue == nil {
-          sourceValue = options?[NSNullPlaceholderBindingOption]
+          sourceValue = options[NSNullPlaceholderBindingOption]
         }
 
         // Optionally transform the source value.
         if let valueTransformer = Binding.valueTransformerFromOptions(options) {
-          sourceValue = valueTransformer.transformedValue(sourceValue)
+          sourceValue = valueTransformer.transformedValue(sourceValue) as AnyObject?
         }
 
         // Update the target if the source and target values are not equal.
         let equal: Bool
         switch (sourceValue, targetValue) {
-          case (.None, .None):
+          case (.none, .none):
             equal = true
-          case (.Some(let s), .Some(let t)):
+          case (.some(let s), .some(let t)):
             equal = s === t || s.isEqual(t)
           default:
             equal = false

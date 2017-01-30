@@ -32,7 +32,7 @@ public extension NSObject
     #if os(iOS)
     // The following methods mimic the Cocoa-bindings interface on macOS:
 
-    public func bind(key: String, toObject sourceObject: NSObject, withKeyPath keyPath: String, options: [String:AnyObject]?)
+    public func bind(_ key: String, toObject sourceObject: NSObject, withKeyPath keyPath: String, options: [String:AnyObject]?)
       {
         var bindings: NSMutableDictionary! = objc_getAssociatedObject(self, &bindingsKey) as? NSMutableDictionary
         if bindings == nil {
@@ -44,20 +44,20 @@ public extension NSObject
       }
 
 
-    public func unbind(key: String)
+    public func unbind(_ key: String)
       {
         let bindings = objc_getAssociatedObject(self, &bindingsKey) as! NSMutableDictionary
         bindings[key] = nil
       }
 
 
-    public func infoForBinding(key: String) -> [String: AnyObject]?
+    public func infoForBinding(_ key: String) -> [String: AnyObject]?
       {
         if let binding = (objc_getAssociatedObject(self, &bindingsKey) as? NSMutableDictionary)?[key] as? Binding {
           return [
               NSObservedObjectKey: binding.sourceObject,
-              NSObservedKeyPathKey: binding.sourceKeyPath,
-              NSOptionsKey: binding.options ?? [:],
+              NSObservedKeyPathKey: binding.sourceKeyPath as AnyObject,
+              NSOptionsKey: binding.options as AnyObject,
             ]
         }
         return nil
@@ -66,7 +66,7 @@ public extension NSObject
     #endif
 
 
-    public func setValue(value: AnyObject?, forBinding key: String) throws
+    public func setValue(_ value: AnyObject?, forBinding key: String) throws
       {
         // If a binding exists for the specified property then the coresponding property of that binding's source object
         // is set; otherwise we defer to -setValue:forKey:. An exception is raised if the source object for the binding
@@ -81,8 +81,8 @@ public extension NSObject
           var validValue = value
           // Apply the reverse transformation specified in the binding options, if applicable.
           if let transformer = Binding.valueTransformerFromOptions(options) {
-            if transformer.dynamicType.allowsReverseTransformation() {
-              validValue = transformer.reverseTransformedValue(validValue)
+            if type(of: transformer).allowsReverseTransformation() {
+              validValue = transformer.reverseTransformedValue(validValue) as AnyObject?
             }
           }
           // Ask the observed object to validate the given value, throwing on failure
